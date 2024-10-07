@@ -517,7 +517,7 @@
                     @if ($form->page_type=="vertical")
                     @if(substr($form->background_image, 0, 1) !== '#')
                         <div class="home-sliding-option">
-                            <a href="{{ route('form.background-only',['id' => $form->sid]) }}"><x-box source="{{ $form->background_image}}" title="" size="{{$form->paper_size}}"/></a>
+                            <a href="{{ route('form.background-only',['id' => $form->id]) }}"><x-box source="{{ $form->background_image}}" title="" size="{{$form->paper_size}}"/></a>
                         </div>
                     @endif
                     @endif

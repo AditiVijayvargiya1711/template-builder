@@ -125,11 +125,13 @@
 
                                 </div>
                             </div>
+                            {{--
                             <div class="col-sm-12 col-md-6">
                                 <div class="form-group">
                                     <label for="select2Input" class="control-label">Form Sid</label>
-                                    {{-- <input type="number" name="sid" class="form-control mb-2 fw-bold"
-                                        placeholder="Write Your Title" value="{{ old('sid') }}" /> --}}
+                                     <input type="number" name="sid" class="form-control mb-2 fw-bold"
+                                        placeholder="Write sid" value="{{ old('sid',$data->sid) }}" /> 
+                                    
                                     <select id="select2Input" class="js-example-basic-single border" data-control="select2"
                                         style="width: 100%" name="sid" placeholder="Select SID">
                                         @foreach ($jsonData as $old_value)
@@ -144,12 +146,12 @@
                                             </option>
                                         @endforeach
                                     </select>
-
+                                    
 
 
                                 </div>
                             </div>
-
+                            --}}
                             <div class="col-sm-12 col-md-6">
                                 <div class="form-group">
                                     <label for="template_type">Template Type</label>
@@ -169,7 +171,7 @@
                                     </select>
                                 </div>
                             </div>
-
+                            
                             <div class="col-sm-12 col-md-6">
                                 <div class="form-group">
                                     <label for="font_type">Font Type</label>
@@ -244,7 +246,7 @@
                                     </select>
                                 </div>
                             </div>
-
+                            {{--
                             <div class="col-sm-12 col-md-6">
                                 <div class="form-group">
                                     <label for="sid">Category</label>
@@ -255,14 +257,24 @@
                                             </option>
                                             @foreach ($category as $c)
                                                 @if ($c->id != $data->category_type->id)
-                                                    <option value="{{ $c->id }}">{{ $c->name }}</option>
+                                                    <option value="{{ $c }}">{{ $c }}</option>
                                                 @endif
                                             @endforeach
                                         @endisset
                                     </select>
                                 </div>
                             </div>
-
+                            --}}
+                            <div class="col-sm-12 col-md-6">
+                                <div class="form-group">
+                                    <label for="category">Category</label>
+                                    <select class="form-control mb-2 fw-bold" name="category" id="template">
+                                        @foreach ($category as $c)
+                                            <option value="{{ $c }}">{{ $c }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
                             <div class="col-sm-12 col-md-6">
                                 <div class="form-group">
                                     <label for="category">Image Transparacy Rate</label>

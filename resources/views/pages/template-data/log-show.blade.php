@@ -16,11 +16,18 @@
             <div class="col-md-11">
                 <div class="card shadow-lg">
                     <div class="card-body table-full-width table-responsive">
-
+                        {{--
                         <div class="button-list-flex">
                             <h4> <strong class="text-primary">Template Content</strong></h4>
+                        </div>--}}
+                        <div style=" width:600px; height:700px; overflow:scroll; margin:auto;border:2px solid black;">
+                        {{--{!! $pdfImage !!}
+                        {!! $data['content'] !!}
+                        {!! $data['pageMode'] !!}
+                        {!! $data['pageFormat'] !!}
+                        <img src="{{ asset($result->template_type) }}">--}}
+                        <img src="{{ asset($data['watermarkImage']) }}">
                         </div>
-                        {!! $pdfImage !!}
                     </div>
                 </div>
             </div>

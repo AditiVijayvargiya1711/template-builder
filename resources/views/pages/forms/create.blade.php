@@ -131,14 +131,14 @@
                                     @endif
                                 </div>
                             </div>
-
+                            {{--
                             <div class="col-sm-12 col-md-6">
 
 
                                 <div class="form-group ">
                                     <label for="select2Input" class="control-label">Form Sid</label>
-                                    {{-- <input type="number" name="sid" class="form-control mb-2 fw-bold"
-                                        placeholder="Write Your Title" value="{{ old('sid') }}" /> --}}
+                                    <input type="number" name="sid" class="form-control mb-2 fw-bold"
+                                        placeholder="Write sId" value="{{ 0 }}" /> 
                                     <select id="select2Input" class="js-example-basic-single border" data-control="select2"
                                         style="width: 100%" name="sid" placeholder="Select SID">
 
@@ -155,7 +155,7 @@
 
                                 </div>
                             </div>
-
+                            --}}
                             <div class="col-sm-12 col-md-6">
                                 <div class="form-group">
                                     <label for="template_type">Template Type</label>
@@ -207,7 +207,7 @@
                                     <label for="category">Category</label>
                                     <select class="form-control mb-2 fw-bold" name="category" id="template">
                                         @foreach ($category as $c)
-                                            <option value="{{ $c->id }}">{{ $c->name }}</option>
+                                            <option value="{{ $c }}">{{ $c }}</option>
                                         @endforeach
                                     </select>
                                 </div>

@@ -1294,7 +1294,7 @@
     <div id="blanksV" class="editor-choose-option">
     @foreach ($forms as $template)
         @if($template->page_type=="vertical" && $template->image_transparacy=="0")
-            <img id="{{$template->sid}}" draggable="true" class="backgroundV draggable vertical" src="{{ asset($template->background_image)}}" >
+            <img id="{{$template->id}}" draggable="true" class="backgroundV draggable vertical" src="{{ asset($template->background_image)}}" >
         @endif
     @endforeach
     </div>
@@ -1304,7 +1304,7 @@
     <div id="blanksH" class="editor-choose-option">
         @foreach ($forms as $template)
         @if($template->page_type=="horizontal" && $template->image_transparacy=="0")
-            <img id="{{$template->sid}}" draggable="true" class="backgroundH draggable horizontal" src="{{ asset($template->background_image)}}">
+            <img id="{{$template->id}}" draggable="true" class="backgroundH draggable horizontal" src="{{ asset($template->background_image)}}">
         @endif
         @endforeach
     </div>
@@ -1314,7 +1314,7 @@
     <div id="backgroundsV" class="editor-choose-option">
         @foreach ($forms as $template)
         @if($template->page_type=="vertical" && $template->image_transparacy!="0")
-            <img id="{{$template->sid}}" draggable="true" class="backgroundV draggable vertical" src="{{ asset($template->background_image)}}">
+            <img id="{{$template->id}}" draggable="true" class="backgroundV draggable vertical" src="{{ asset($template->background_image)}}">
         @endif
         @endforeach
     </div>
@@ -1325,7 +1325,7 @@
     <div id="backgroundsH" class="editor-choose-option">
         @foreach ($forms as $template)
         @if($template->page_type=="horizontal" && $template->image_transparacy!="0")
-            <img id="{{$template->sid}}" draggable="true" class="backgroundH draggable horizontal" src="{{ asset($template->background_image)}}">
+            <img id="{{$template->id}}" draggable="true" class="backgroundH draggable horizontal" src="{{ asset($template->background_image)}}">
         @endif
         @endforeach
     </div>
@@ -1336,7 +1336,7 @@
     <div id="templatesV" class="editor-choose-option">
         @foreach ($forms as $template)
         @if($template->page_type=="vertical")
-            <img id="{{$template->sid}}"draggable="true" class="templateV draggable vertical" src="{{ asset($template->template_type)}}">
+            <img id="{{$template->id}}"draggable="true" class="templateV draggable vertical" src="{{ asset($template->template_type)}}">
         @endif
         @endforeach
     </div>
@@ -1347,7 +1347,7 @@
     <div id="templatesH" class="editor-choose-option">
         @foreach ($forms as $template)
         @if($template->page_type=="horizontal")
-            <img id="{{$template->sid}}"draggable="true" class="templateH draggable horizontal" src="{{ asset($template->template_type)}}">
+            <img id="{{$template->id}}"draggable="true" class="templateH draggable horizontal" src="{{ asset($template->template_type)}}">
         @endif
         @endforeach
     </div>

@@ -21,7 +21,7 @@ class FormUpdateLogController extends Controller
     {
 
         $form = Form::find($id);
-        $formUpdateLogs = FormUpdateLog::where('sid', $form->sid)->orderBy('id', 'desc');
+        $formUpdateLogs = FormUpdateLog::where('id', $form->id)->orderBy('id', 'desc');
         if ($request->ajax()) {
             return DataTables::of($formUpdateLogs->select('id','title','sid')->get())
             ->addIndexColumn()

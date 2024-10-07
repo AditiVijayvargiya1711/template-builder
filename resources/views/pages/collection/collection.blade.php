@@ -80,7 +80,7 @@
                         <div class="collection-collect-vertical">
                         @foreach ($chunk as $result)
                                
-                                <a href="{{ route('form.any',['id' => $result->sid]) }}"><abbr title="{{$result->title}}"><img class="collection-box"style="margin:10px;width:300px;height:500px;border-radius:10px;" src="{{ asset($result->template_type) }}" alt="Template Image"></abbr></a>
+                                <a href="{{ route('form.any',['id' => $result->id]) }}"><abbr title="{{$result->title}}"><img class="collection-box"style="margin:10px;width:300px;height:500px;border-radius:10px;" src="{{ asset($result->template_type) }}" alt="Template Image"></abbr></a>
                                 
                         @endforeach
                         </div>
@@ -103,7 +103,7 @@
                         <div class="collection-collect-horizontal">
                         @foreach ($chunk as $result)
                                 
-                                <a href="{{ route('form.any',['id' => $result->sid]) }}"><abbr title="{{$result->title}}"><img class="collection-box"style="margin:10px;width:300px;height:180px;border-radius:10px;" src="{{ asset($result->template_type) }}" alt="Template Image"></abbr></a>
+                                <a href="{{ route('form.any',['id' => $result->id]) }}"><abbr title="{{$result->title}}"><img class="collection-box"style="margin:10px;width:300px;height:180px;border-radius:10px;" src="{{ asset($result->template_type) }}" alt="Template Image"></abbr></a>
                                 
                         @endforeach
                         </div>
@@ -125,7 +125,7 @@
                         <div class="collection-collect-vertical">
                         @foreach ($chunk as $form)
                                
-                                <a href="{{ route('form.any',['id' => $form->sid]) }}"><abbr title="{{$form->title}}"><img class="collection-box"style="margin:10px;width:300px;height:500px;border-radius:10px;" src="{{ asset($form->template_type) }}" alt="Template Image"></abbr></a>
+                                <a href="{{ route('form.any',['id' => $form->id]) }}"><abbr title="{{$form->title}}"><img class="collection-box"style="margin:10px;width:300px;height:500px;border-radius:10px;" src="{{ asset($form->template_type) }}" alt="Template Image"></abbr></a>
                                 
                         @endforeach
                         </div>
@@ -148,7 +148,7 @@
                         <div class="collection-collect-horizontal">
                         @foreach ($chunk as $form)
                                 
-                                <a href="{{ route('form.any',['id' => $form->sid]) }}"><abbr title="{{$form->title}}"><img class="collection-box"style="margin:10px;width:300px;height:180px;border-radius:10px;" src="{{ asset($form->template_type) }}" alt="Template Image"></abbr></a>
+                                <a href="{{ route('form.any',['id' => $form->id]) }}"><abbr title="{{$form->title}}"><img class="collection-box"style="margin:10px;width:300px;height:180px;border-radius:10px;" src="{{ asset($form->template_type) }}" alt="Template Image"></abbr></a>
                                 
                         @endforeach
                         </div>

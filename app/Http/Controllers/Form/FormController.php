@@ -55,7 +55,7 @@ class FormController extends Controller
 
         $data =Form::orderBy('id', 'desc');
         if ($request->ajax()) {
-            return DataTables::of($data->select('id','title','sid')->get())
+            return DataTables::of($data->select('id','title')->get())
             ->addIndexColumn()
             ->addColumn('form_log', function($row){
                 $form_log = '<a href="javascript:void(0)" title="Edit Content" data-toggle="tooltip" data-id="'.$row->id.'" class="see_logs text-black">
@@ -95,7 +95,7 @@ class FormController extends Controller
      */
     public function create()
     {
-        $category = Category::all();
+        $category = ["1","2","3","4","5","6","7","8"];
         $jsonData = ServiceIdClass::getServiceId();
         return view('pages.forms.create',compact('category','jsonData'));
     }
@@ -107,7 +107,7 @@ class FormController extends Controller
     {
         $request->validate([
             'title' => 'required',
-            'sid' => 'required',
+            //'sid' => 'required',
             'template_type' => 'required',
             'font_type' => 'required',
             'paper_size' => 'required',
@@ -134,7 +134,7 @@ class FormController extends Controller
         $transparacy= (float)$request->image_transparacy;
         $data = Form::create([
             'title' => $request->title,
-            'sid' => $request->sid,
+            //'sid' => $request->sid,
             'template_type' => $request->template_type,
             'font_type' => $request->font_type,
             'paper_size' => $request->paper_size,
@@ -165,7 +165,7 @@ class FormController extends Controller
     public function edit($id)
     {
         $data = Form::find($id);
-        $category = Category::all();
+        $category = ["1","2","3","4","5","6","7","8"];
         $jsonData = ServiceIdClass::getServiceId();
         return view('pages.forms.edit', compact('data','category','jsonData'));
     }
@@ -471,13 +471,14 @@ class FormController extends Controller
     $formData = Form::find($id);
     // $formData = Form::where('sid',$logdata->sid)->first();
 
-
-    $content=$formData->content;
-    $pageMode = $formData->page_type;
-    $pageFormat = $formData->paper_size;
-    $watermarkImage = $formData->background_image;
-    $imageTransparacy = $formData->image_transparacy;
-
+    $data=[
+    'content'=>$formData->content,
+    'pageMode' => $formData->page_type,
+    'pageFormat' => $formData->paper_size,
+    'watermarkImage' => $formData->template_type,
+    'imageTransparacy' => $formData->image_transparacy,
+];
+/*
     $data = [
         'content' => $formData->content,
     ];
@@ -508,7 +509,8 @@ class FormController extends Controller
 
     
     $pdfImage = '<iframe src="data:application/pdf;base64,' . base64_encode($pdfData) . '" width="100%" height="600px"></iframe>';
-    return view('pages.template-data.log-show', compact('pdfImage'));
+*/  
+    return view('pages.template-data.log-show', ['data'=>$data]);
  }
 
 }

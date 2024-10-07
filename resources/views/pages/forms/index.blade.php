@@ -25,7 +25,6 @@
                                 <thead class="badge-light">
                                     <th>ID</th>
                                     <th>Title</th>
-                                    <th>SID</th>
                                     <th>Action </th>
 
                                 </thead>
@@ -55,10 +54,6 @@
                     {
                         data: 'form_log',
                         name: 'form_log'
-                    },
-                    {
-                        data: 'sid',
-                        name: 'sid'
                     },
                     {
                         data: 'action',
