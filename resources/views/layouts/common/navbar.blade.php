@@ -105,7 +105,7 @@
 <div id="navbar-main">
         <a id="navbar-logo"class="navbar-brand" href="{{ url('/home') }}">
         {{--            {{ config('app.name', 'tinymce') }}--}}
-                    <img src="{{ asset('assets/images/logo.png') }}" alt="Image" class="img-fluid w-75">
+                    <img src="{{ asset('assets/images/logo1.webp') }}" style="min-width:150px;height:70px;"alt="Image" class="img-fluid w-75">
                 </a>
 
                 <div id="navbar-dropdown"class="dropdown">
